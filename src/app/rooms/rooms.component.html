@@ -1,0 +1,132 @@
+<!-- interpolation -->
+<!-- <h1>Welcome to {{ hotelName }}</h1> -->
+<!-- <hinv-header></hinv-header> -->
+
+<!-- <button class="btn btn-primary" [routerLink]="['/rooms', '1']">Book Room 1</button>
+<button class="btn btn-primary" [routerLink]="['/rooms', '2']">Book Room 2</button>
+<button class="btn btn-primary" [routerLink]="['/rooms', '3']">Book Room 3</button> -->
+
+<!-- {{rooms$ | async | json}} -->
+<!-- EventBinding -->
+<!-- <div [hidden]="hideWindows"> -->
+  <!-- Number of Windows: -->
+  <!-- ngstyle usecase -->
+  <!-- <div
+    [ngStyle]="{ color: 'rooms.availableRooms' ? 'orange' : 'red' }"
+    [innerText]="numberOfWindows"
+  ></div> -->
+<!-- </div> -->
+
+<!-- <div *ngIf="selectedRoom">
+  {{ selectedRoom | json }}
+</div> -->
+
+<!-- <div>
+  <button (click)="addRoom()">Add Room</button>
+</div> -->
+
+<!-- <div *ngIf="rooms$ | async as rooms">
+  <hinv-rooms-list [rooms]="rooms" [title]="title"
+  (selectedRoom)="selectRoom($event)"></hinv-rooms-list>
+  </div> -->
+<!-- <h1>Number of Rooms: {{roomsCount$ | async}}</h1> -->
+
+<!-- {{rooms?.availableRooms ?? "No Room Available"}} -->
+
+<!-- {{roomList | json}} -->
+<!-- *ngif usecase -->
+<!-- <div *ngIf="hideWindows">
+  <hinv-rooms-list
+    [rooms]="roomList" [title]="title"
+    (selectedRoom)="selectRoom($event)"
+  ></hinv-rooms-list> -->
+  <!-- Rooms List -->
+  <!-- *ngfor usecase -->
+  <!-- {{roomList}} -->
+  <!-- <table class="table"> -->
+  <!-- <tr>
+      <th>index</th>
+      <th>Even/Odd</th>
+      <th>Room Number</th>
+      <th>Room Type</th>
+      <th>Room Price</th>
+      <th>Amenities</th>
+      <th>Checkin Time</th>
+    </tr> -->
+  <!-- ngclass and ngfor usecase -->
+  <!-- <tr [ngClass]="e? 'even': 'odd'" *ngFor="let room of roomList | slice: 0; let e=even; let o = odd; let i = index;"> -->
+  <!-- <td>{{i | percent}}</td>
+      <td>{{e ? "Even" : "Odd"}}</td>
+      <td>{{room.roomNumber}}</td>
+      <td>{{room.roomType}}</td>
+      <td>{{room.price | currency: 'INR'}}</td>
+      <td>{{room.amenities | lowercase}}}</td>
+      <td>{{room.checkinTime | date: 'dd/MMM/yyyy'}}</td>
+      <td>{{room.rating | number: '1.1-1'}}</td> -->
+  <!-- </tr> -->
+  <!-- </table> -->
+<!-- </div> -->
+
+<!-- Property binding -->
+<!-- Number of Rooms:
+<div [innerText]="numberOfRooms"></div> -->
+
+<!-- banana brackets for events and eventbinding -->
+<!-- <button (click)="toggle()">Toggle</button>
+
+<button (click)="editRoom()">Edit Room</button>
+
+<button (click)="deleteRoom()">Delete Room</button>
+
+<h1>
+  {{totalBytes}} loaded
+</h1> -->
+
+<!-- ---------------------------------------------------------------------------- -->
+
+<!-- <h1>Welcome to {{ hotelName }}</h1> -->
+<hinv-header></hinv-header>
+<!-- <hinv-header></hinv-header>
+<hinv-header></hinv-header> -->
+<!-- {{rooms$ | async | json}} -->
+<!-- <div [hidden]="hideRooms">
+  Number of Rooms:
+  <div [ngStyle]= "{'color': rooms.availableRooms ? 'green' : 'red'}"
+    [innerText]="numberOfRooms">
+  </div>
+</div> -->
+<!-- 
+<div>
+  Message from Employee {{message$ | async}}
+</div>
+
+{{ rooms?.availableRooms ?? "No rooms" }} -->
+
+{{roomList | json}}
+<!-- <div *ngIf="selectedRoom">
+    {{ selectedRoom |json }}
+</div> -->
+<router-outlet></router-outlet>
+<div>
+  <button class="btn btn-success" routerLink="add">Add Room</button>
+</div>
+<!-- <h1> -->
+  <!-- {{getError$ | async}} -->
+  <!-- Number of Rooms: {{roomsCount$ | async}} -->
+<!-- </h1> -->
+
+<div *ngIf="rooms$ | async as rooms">
+<hinv-rooms-list [rooms]="rooms"[title]="title"
+(selectedRoom)="selectRoom($event)"></hinv-rooms-list>
+</div>
+
+<button (click)="toggle()">Toggle</button>
+
+<button (click)="editRoom()">Edit Room</button> 
+<button (click)="deleteRoom()">Delete Room</button>
+
+<h1>
+  {{totalBytes}} loaded
+</h1> 
+
+<!-- document.getElementById('numberOfRooms').innerText = numberOfRooms; -->
