@@ -1,5 +1,8 @@
 # HotelInventoryApp
 
+This project uses hotelAPI(dummy API) use that repo and run "npm start" to start the API on (https://localhost:3000) and then run this project to connnect to the API
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
 
 ## Development server
